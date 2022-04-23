@@ -47,7 +47,7 @@ t:Clone().Parent = player.Backpack
 end))
 Tool2.Name = "stinkymogus"
 Tool2.Parent = Script1
-Tool2.TextureId = "rbxasset://Textures/Sword128.png"
+Tool2.TextureId = "rbxassetid://9389158543"
 Tool2.Grip = CFrame.new(0, 0, -1.5, 0, 0, 1, 1, 0, 0, 0, 1, 0)
 Tool2.GripForward = Vector3.new(-1, -0, -0)
 Tool2.GripPos = Vector3.new(0, 0, -1.5)
@@ -94,7 +94,7 @@ Sound7.Volume = 0.6000000238418579
 Sound8.Name = "Unsheath"
 Sound8.Parent = Part3
 Sound8.SoundId = "rbxassetid://5799965056"
-Sound8.Volume = 1
+Sound8.Volume = 5
 Sound9.Name = "bgMusic"
 Sound9.Parent = Part3
 Sound9.Pitch = 1.399999976158142
