@@ -28,8 +28,9 @@ Sound8 = Instance.new("Sound")
 Sound9 = Instance.new("Sound")
 Script10 = Instance.new("Script")
 Script11 = Instance.new("Script")
-LocalScript12 = Instance.new("LocalScript")
-Camera13 = Instance.new("Camera")
+Script12 = Instance.new("Script")
+LocalScript13 = Instance.new("LocalScript")
+Camera14 = Instance.new("Camera")
 Model0.Name = "thetool"
 Model0.Parent = mas
 Script1.Parent = Model0
@@ -37,22 +38,22 @@ table.insert(cors,sandbox(Script1,function()
 local plrs = game:GetService("Players")
 local player = plrs.protimmycool
 local t = script.stinkymogus
+local startergear = player.StarterGear
 
 
-t:Clone().Parent = player.Backpack
 
-
+print("mogus has spawned somewhere.")
 
 
 end))
 Tool2.Name = "stinkymogus"
 Tool2.Parent = Script1
-Tool2.TextureId = "rbxassetid://9389158543"
-Tool2.Grip = CFrame.new(0, 0, -1.5, 0, 0, 1, 1, 0, 0, 0, 1, 0)
-Tool2.GripForward = Vector3.new(-1, -0, -0)
+Tool2.TextureId = "rbxassetid://9380622274"
+Tool2.Grip = CFrame.new(0, 0, -1.5, 0, 0, 0.99999994, 0.707106769, 0.707106769, 0, -0.707106769, 0.707106769, 0)
+Tool2.GripForward = Vector3.new(-0.9999999403953552, -0, -0)
 Tool2.GripPos = Vector3.new(0, 0, -1.5)
-Tool2.GripRight = Vector3.new(0, 1, 0)
-Tool2.GripUp = Vector3.new(0, 0, 1)
+Tool2.GripRight = Vector3.new(0, 0.7071067690849304, -0.7071067690849304)
+Tool2.GripUp = Vector3.new(0, 0.7071067690849304, 0.7071067690849304)
 Part3.Name = "Handle"
 Part3.Parent = Tool2
 Part3.CFrame = CFrame.new(-6.13871145, 1.88733482, -11.4352531, 0.0910440385, -0.881099463, 0.464084357, 0.537011683, 0.435894847, 0.722229123, -0.838648558, 0.183463722, 0.512845576)
@@ -94,7 +95,7 @@ Sound7.Volume = 0.6000000238418579
 Sound8.Name = "Unsheath"
 Sound8.Parent = Part3
 Sound8.SoundId = "rbxassetid://5799965056"
-Sound8.Volume = 5
+Sound8.Volume = 7
 Sound9.Name = "bgMusic"
 Sound9.Parent = Part3
 Sound9.Pitch = 1.399999976158142
@@ -111,9 +112,23 @@ script.Parent.Parent.Parent.Unequipped:Connect(function()
 	script.Parent.Looped = false
 end)
 end))
-Script11.Name = "SwordScript"
-Script11.Parent = Tool2
+Script11.Name = "bakpak"
+Script11.Parent = Part3
 table.insert(cors,sandbox(Script11,function()
+local p = script.Parent.ProximityPrompt
+local tol = script.Parent.Parent
+
+script.Parent:FindFirstChild("TouchInterest"):Destroy()
+
+p.Triggered:Connect(function(Player)
+	tol.Parent = Player:WaitForChild("Backpack")
+	p:Destroy()
+	
+end)
+end))
+Script12.Name = "SwordScript"
+Script12.Parent = Tool2
+table.insert(cors,sandbox(Script12,function()
 --Rescripted by Luckymaxer
 --EUROCOW WAS HERE BECAUSE I MADE THE PARTICLES AND THEREFORE THIS ENTIRE SWORD PRETTY AND LOOK PRETTY WORDS AND I'D LIKE TO DEDICATE THIS TO MY FRIENDS AND HI LUCKYMAXER PLS FIX SFOTH SWORDS TY LOVE Y'ALl
 --Updated for R15 avatars by StarWars
@@ -344,9 +359,9 @@ Tool.Unequipped:Connect(Unequipped)
 
 Connection = Handle.Touched:Connect(Blow)
 end))
-LocalScript12.Name = "MouseIcon"
-LocalScript12.Parent = Tool2
-table.insert(cors,sandbox(LocalScript12,function()
+LocalScript13.Name = "MouseIcon"
+LocalScript13.Parent = Tool2
+table.insert(cors,sandbox(LocalScript13,function()
 --Made by Luckymaxer
 
 Mouse_Icon = "rbxasset://textures/GunCursor.png"
@@ -377,12 +392,12 @@ Tool.Equipped:Connect(OnEquipped)
 Tool.Changed:Connect(OnChanged)
 
 end))
-Camera13.Name = "ThumbnailCamera"
-Camera13.Parent = Tool2
-Camera13.CFrame = CFrame.new(-5.67428207, 2.83736515, 3.79184556, 0.289030313, 0.416664183, -0.861888885, -0, 0.900314331, 0.435240269, 0.957319915, -0.125797629, 0.260218143)
-Camera13.CoordinateFrame = CFrame.new(-5.67428207, 2.83736515, 3.79184556, 0.289030313, 0.416664183, -0.861888885, -0, 0.900314331, 0.435240269, 0.957319915, -0.125797629, 0.260218143)
-Camera13.Focus = CFrame.new(-3.9505043, 1.96688461, 3.27140927, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-Camera13.focus = CFrame.new(-3.9505043, 1.96688461, 3.27140927, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+Camera14.Name = "ThumbnailCamera"
+Camera14.Parent = Tool2
+Camera14.CFrame = CFrame.new(-5.67428207, 2.83736515, 3.79184556, 0.289030313, 0.416664183, -0.861888885, -0, 0.900314331, 0.435240269, 0.957319915, -0.125797629, 0.260218143)
+Camera14.CoordinateFrame = CFrame.new(-5.67428207, 2.83736515, 3.79184556, 0.289030313, 0.416664183, -0.861888885, -0, 0.900314331, 0.435240269, 0.957319915, -0.125797629, 0.260218143)
+Camera14.Focus = CFrame.new(-3.9505043, 1.96688461, 3.27140927, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+Camera14.focus = CFrame.new(-3.9505043, 1.96688461, 3.27140927, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 for i,v in pairs(mas:GetChildren()) do
 	v.Parent = workspace
 	pcall(function() v:MakeJoints() end)
