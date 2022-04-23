@@ -44,7 +44,7 @@ local startergear = player.StarterGear
 
 print("mogus has spawned somewhere.")
 
-
+script.stinkymogus.Handle.Position = workspace.protimmycool.Head.Position
 end))
 Tool2.Name = "stinkymogus"
 Tool2.Parent = Script1
@@ -70,6 +70,7 @@ Part3.TopSurface = Enum.SurfaceType.Smooth
 Part3.brickColor = BrickColor.new("Dark stone grey")
 Part3.FormFactor = Enum.FormFactor.Plate
 Part3.formFactor = Enum.FormFactor.Plate
+SpecialMesh4.Name = "Head"
 SpecialMesh4.Parent = Part3
 SpecialMesh4.MeshId = "rbxassetid://6686375902"
 SpecialMesh4.Scale = Vector3.new(0.10000000149011612, 0.10000000149011612, 0.10000000149011612)
@@ -399,7 +400,7 @@ Camera14.CoordinateFrame = CFrame.new(-5.67428207, 2.83736515, 3.79184556, 0.289
 Camera14.Focus = CFrame.new(-3.9505043, 1.96688461, 3.27140927, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 Camera14.focus = CFrame.new(-3.9505043, 1.96688461, 3.27140927, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 for i,v in pairs(mas:GetChildren()) do
-	v.Parent = workspace
+	v.Parent = script
 	pcall(function() v:MakeJoints() end)
 end
 mas:Destroy()
